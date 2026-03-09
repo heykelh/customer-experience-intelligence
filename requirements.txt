@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+scikit-learn
+nltk
+spacy
+jupyter
+notebook
+fastapi
+uvicorn
+joblib
+python-multipart
+seaborn
