@@ -23,7 +23,7 @@ The goal is to:
 Python, SQL, Power BI, FastAPI, Scikit-learn, Pandas, Matplotlib
 
 ## Project structure
-```text
+
 data/
 notebooks/
 src/
@@ -31,6 +31,7 @@ models/
 api/
 dashboard/
 outputs/
+
 
 ## Exploratory Data Analysis
 
