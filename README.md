@@ -617,3 +617,115 @@ This dataset contains:
 Additional outputs include:
 outputs/tables/model_comparison.csv
 outputs/tables/feature_importance.csv
+
+These tables summarize model performance and feature importance.
+
+---
+
+### Model Persistence
+
+The final trained model is saved for reuse in later stages of the project.
+models/churn_model.pkl
+
+This saved model can be used for:
+
+- API deployment
+- real-time scoring
+- integration into analytics pipelines
+
+---
+
+### Key Insights
+
+The churn modeling analysis highlights the importance of combining **customer behavior data and customer experience signals** to better understand churn risk.
+
+Key takeaways include:
+
+- customer engagement plays a strong role in retention
+- customers with fewer products tend to churn more frequently
+- satisfaction and effort metrics provide valuable predictive signals
+- complaint exposure may indicate elevated churn risk
+
+These findings illustrate how customer analytics can help organizations move from reactive churn analysis to proactive customer retention strategies.
+
+---
+
+### Role in the Overall Project
+
+This modeling step integrates the different analytical components developed throughout the project:
+
+- exploratory data analysis
+- customer experience metrics
+- NLP analysis of customer complaints
+
+Together, these elements demonstrate how organizations can transform raw customer data into actionable insights that support both operational improvements and strategic decision-making.
+
+## FastAPI Deployment
+
+To simulate model industrialization, the project includes a FastAPI application that exposes the churn model as a scoring service.
+
+The API is implemented in:
+
+`api/app.py`
+
+### Objective
+
+The goal of this API is to demonstrate how a trained churn prediction model can be operationalized and reused outside a notebook environment.
+
+Instead of limiting the model to offline analysis, this component makes it possible to score individual customer profiles through a simple HTTP endpoint.
+
+This reflects a real-world use case where predictive models are integrated into business tools, internal applications or decision-support workflows.
+
+### Features
+
+The API provides:
+
+- a root endpoint to verify that the service is running
+- a `/predict` endpoint for customer churn scoring
+- automatic API documentation through Swagger UI
+
+### Input variables
+
+The `/predict` endpoint accepts a customer profile containing:
+
+- customer financial and demographic variables
+- engagement indicators
+- customer experience metrics such as NPS, effort and satisfaction
+- complaint exposure
+- interaction channel
+
+Additional business features are automatically derived inside the API, including:
+
+- NPS category
+- low satisfaction flag
+- high effort flag
+
+### Output
+
+The API returns:
+
+- `churn_probability`: estimated probability of churn
+- `predicted_churn`: predicted churn class
+- `risk_segment`: low / medium / high risk segment
+
+This output makes the prediction easier to interpret from a business perspective.
+
+### Example usage
+
+Once the API is running locally with Uvicorn, the interactive documentation is available at:
+
+`/docs`
+
+This interface can be used to test the prediction endpoint with custom customer inputs.
+
+### Business value
+
+This API demonstrates the transition from model development to model operationalization.
+
+It shows how churn prediction can be turned into a reusable service that supports:
+
+- customer risk scoring
+- retention prioritization
+- integration into downstream tools or dashboards
+
+This component strengthens the project by adding a product-oriented and industrialization dimension beyond notebook-based analysis.

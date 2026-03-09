@@ -11,3 +11,4 @@ uvicorn
 joblib
 python-multipart
 seaborn
+pydantic
