@@ -1,5 +1,7 @@
 # Customer Experience Intelligence
 
+![Customer Experience Dashboard](dashboard/dashboard.png)
+
 ## Overview
 This project simulates a customer analytics use case in the insurance/banking sector.  
 It combines survey data, customer complaints and transactional variables to generate actionable insights on customer experience and churn risk.
