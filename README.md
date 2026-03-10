@@ -729,3 +729,20 @@ It shows how churn prediction can be turned into a reusable service that support
 - integration into downstream tools or dashboards
 
 This component strengthens the project by adding a product-oriented and industrialization dimension beyond notebook-based analysis.
+
+## Power BI Dashboard
+
+A Power BI dashboard was built to translate churn model outputs into actionable business insights.
+
+It highlights how customer experience indicators such as satisfaction, NPS and interaction channels influence churn risk and retention.
+
+The dashboard includes:
+
+- overall churn KPIs
+- customer risk segmentation
+- churn analysis by experience indicators
+- interaction channel analysis
+
+📊 Full dashboard explanation:
+
+➡️ [Dashboard documentation](dashboard/dashboard_insights.md)
